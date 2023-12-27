@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+    <style>
+        body {
+            background-color: #f4f4f4; /* light gray */
+            color: #333; /* dark gray */
+            /*background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ5qvRW34poYLsAd5bZ9p7tQ2zOrEx6Vaygw&usqp=CAU');
+        background-repeat: no-repeat;
+        background-size: cover;
+        */
+        color: #333; /* dark gray */
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+        }
+        input, button {
+            background-color: #fff; /* white */
+            color: #333; /* dark gray */
+            border: 1px solid #ccc; /* light gray */
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+        
+        }
+    </style>
+</head>
+
+<body >
+    <div id="content" align="center">
+        <form action="/predict" method="post">
+            <h1>Diabetes Prediction</h1>
+            <br><br>
+            <input type="text" id="Gender" name="gender" placeholder="Gender"
+             value="{{gender}}" required="required" />
+            
+            <input type="text" id="Age" name="age" placeholder="Age"
+             value="{{age}}" required="required" />
+
+            <input type="text" id="hypertension" name="hypertension" placeholder="Hypertension" 
+            value="{{hypertension}}" required="required" />
+
+            <input type="text" id="heartdisease" name="heartdisease" placeholder="Heart Disease"
+             value="{{heartdisease}}" required="required" />
+
+            <input type="text" id="smokinghistory" name="smokinghistory" placeholder="Smoking History" 
+            value="{{smokinghistory}}" required="required" />
+
+            <input type="text" id="bmi" name="bmi" placeholder="BMI"
+             value="{{bmi}}" required="required" />
+
+            <input type="text" id="HbA1clevel" name="HbA1clevel" placeholder="HbA1c Level" 
+            value="{{HbA1clevel}}" required="required" />
+
+            <input type="text" id="bloodglucoselevel" name="bloodglucoselevel" placeholder="Blood Glucose Level" 
+            value="{{bloodglucoselevel}}" required="required" />
+
+            <br><br>
+            <button class="center" type="submit" id="submit">Predict</button>
+            <br>
+           
+            <label>Result:</label>
+            <input type="text" placeholder="Result" value="{{ prediction }}" readonly><br><br>
+           <br>
+            <button><a href="https://www.google.com/maps/search/pathology+labs+near+me">Pathology Labs Near Me </button>
+          <br><br>
+          <button><a href="https://www.google.com/maps/search/hospital+near+me"> Hospital Near Me</button>
+            </form>
+    </div>
+</body>
+</html>
